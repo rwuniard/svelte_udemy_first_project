@@ -2,6 +2,7 @@
     import Header from './UI/Header.svelte';
     import MeetupGrid from './Meetups/MeetupGrid.svelte';
     import TextInput from './UI/TextInput.svelte';
+    import Button from './UI/Button.svelte';
 
     let title = '';
     let description = '';
@@ -93,8 +94,7 @@
             controlType="email"
             on:input={(event) => (email = event.target.value)}
         />
-
-        <button type="submit">Save</button>
+        <Button type="submit" caption="Save" />
     </form>
     <MeetupGrid {meetups} />
 </main>
